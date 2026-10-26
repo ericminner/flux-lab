@@ -1,0 +1,8 @@
+# Plain kustomize config (kustomize.config.k8s.io): lists the files to build.
+# Not the same thing as the Flux Kustomization in clusters/rancher/podinfo.yaml.
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+resources:
+  - namespace.yaml
+  - deployment.yaml
+  - service.yaml

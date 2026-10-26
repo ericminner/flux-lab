@@ -1,0 +1,11 @@
+# Flux source: tells source-controller which Git repo and branch to fetch.
+# Docs: https://fluxcd.io/flux/components/source/gitrepositories/
+apiVersion: source.toolkit.fluxcd.io/v1
+kind: GitRepository
+metadata:
+  name: flux-lab
+  namespace: flux-system
+spec:
+  # TODO(eric): how often source-controller polls Git. Use 1m for the lab.
+  # TODO(eric): the HTTPS URL of your public flux-lab repo (public, so no secret).
+  # TODO(eric): the branch to track. Start with main; the drills switch it.

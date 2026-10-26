@@ -1,0 +1,16 @@
+# Flux Kustomization: tells kustomize-controller what to apply from the source.
+# Not the same thing as apps/podinfo/kustomization.yaml, which is plain kustomize config.
+# Docs: https://fluxcd.io/flux/components/kustomize/kustomizations/
+apiVersion: kustomize.toolkit.fluxcd.io/v1
+kind: Kustomization
+metadata:
+  name: podinfo
+  namespace: flux-system
+spec:
+  # TODO(eric): reconcile and drift-check interval. Use 1m for the lab.
+  # TODO(eric): point at the GitRepository in source.yaml (kind and name).
+  # TODO(eric): the folder inside the repo to apply.
+  # TODO(eric): delete cluster objects whose files are removed from Git.
+  # TODO(eric): wait for applied objects to become healthy, and give up after 2m.
+  #             Without this, Flux reports Ready as soon as the apply succeeds,
+  #             even if the pods never start.
