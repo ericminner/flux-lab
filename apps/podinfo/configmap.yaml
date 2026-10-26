@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: podinfo-ui
+  namespace: podinfo
+data:
+  PODINFO_UI_MESSAGE: "flux-lab: settings from a ConfigMap"

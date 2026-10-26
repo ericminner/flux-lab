@@ -24,8 +24,9 @@ spec:
           env:
             - name: PODINFO_UI_COLOR
               value: "#34577c"
-            - name: PODINFO_UI_MESSAGE
-              value: "flux-lab: main"
+          envFrom:
+            - configMapRef:
+                name: podinfo-ui
           readinessProbe:
             httpGet:
               path: /readyz
