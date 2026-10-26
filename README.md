@@ -151,8 +151,8 @@ For each drill:
    `flux events -n flux-system --for Kustomization/podinfo`,
    `kubectl describe kustomization podinfo -n flux-system`, then `get`, `describe`,
    `logs` and `events` on the workloads. Read the repo files last, to confirm.
-3. Fix it **in Git**: check out the drill branch, commit and push. Watch Flux
-   recover.
+3. Fix it **in Git**: commit `NOTES.md` on `main` first, then check out the drill
+   branch, fix, commit and push. Watch Flux recover.
 4. In `NOTES.md`, write the symptom, the root cause, the command that showed it, and
    what you'd check first next time.
 5. Answer: while it was broken, what was serving traffic, and why?
