@@ -17,13 +17,13 @@ spec:
     spec:
       containers:
         - name: podinfo
-          image: ghcr.io/stefanprodan/podinfo:6.15.0
+          image: ghcr.io/stefanprodan/podinfo:6.99.0
           ports:
             - name: http
               containerPort: 9898
           env:
             - name: PODINFO_UI_COLOR
-              value: "#34577c"
+              value: "#c62828"
             - name: PODINFO_UI_MESSAGE
               value: "flux-lab: main"
           readinessProbe:
